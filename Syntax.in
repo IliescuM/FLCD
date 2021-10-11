@@ -1,0 +1,14 @@
+program = (stmt " "|while_stmt | if_stmt) {stmt " "|while_stmt | if_stmt}
+decstmt := identifier
+statements:= decstmt | assignstmt | readstmt | writestmt
+assignstmt:= ("define" type a) | "declare" type a{, a}
+readstmt:= "readFrom" "(" a ")"
+writestmt:= "writeFrom" "(" a ")"
+type = "int" | "char" | "string"
+logicalOperator = "and" | "or" | "not"
+if_stmt:: "ifGo" conditionstmt program [else_stmt]
+else_stmt:= "elseGo" conditionstmt program
+conditionstmt::= a relation a | a logicalOperator a
+relation:= "<" | "<=" | "==" | ">=" | ">" | "!="
+for_stmt:= "forGo" conditionstmt program
+while_stmt:="whileGo" conditionstmt program

@@ -1,0 +1,31 @@
+Alphabet:
+a. Upper (A-Z) and lower case letters (a-z) of the English alphabet
+b. Underline character '_';
+c. Decimal digits (0-9);
+1. Lexic:
+a.Special symbols, representing:
+- arithmetic operators + - * / %  
+- logical operators and or not 
+- comparison operators == != > < >= <=
+- separator space
+- reserved words: ifGo elseGo not or whileGo and print for False True readFrom writeFrom
+
+b.identifiers
+-a sequence of letters and digits, such that the first character is a letter or "_"; the rule is:
+identifier ::= (letter | underscore) | (letter | underscore) {letter | digit | underscore}
+loLetters ::= "a" | "b" | ...| "z"
+letter ::= "A" | "B" | . ..| "Z" | loLetters
+digit ::= "0" | "1" |...| "9"
+underscore ::= "_"
+
+c.constants
+1.int - rule:
+    int = 0 | [+|-] notZeroDigit {digit}
+    notZeroDigit = "1" | "2" | ... | "9"
+
+2.char
+char:='letter'|'digit'|'underscore'
+3.string
+constchar:="string"
+string:=char{string}
+char:=letter|digit|underscore
