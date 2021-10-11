@@ -25,3 +25,5 @@ char
 string
 readFrom
 writeFrom
+define
+declare

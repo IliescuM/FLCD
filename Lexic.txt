@@ -12,11 +12,11 @@ a.Special symbols, representing:
 
 b.identifiers
 -a sequence of letters and digits, such that the first character is a letter or "_"; the rule is:
-identifier ::= (letter | underscore) | (letter | underscore) {letter | digit | underscore}
-loLetters ::= "a" | "b" | ...| "z"
-letter ::= "A" | "B" | . ..| "Z" | loLetters
-digit ::= "0" | "1" |...| "9"
-underscore ::= "_"
+identifier = (letter | underscore) | (letter | underscore) {letter | digit | underscore}
+loLetters = "a" | "b" | ...| "z"
+letter = "A" | "B" | . ..| "Z" | loLetters
+digit = "0" | "1" |...| "9"
+underscore = "_"
 
 c.constants
 1.int - rule:
@@ -24,8 +24,8 @@ c.constants
     notZeroDigit = "1" | "2" | ... | "9"
 
 2.char
-char:='letter'|'digit'|'underscore'
+char='letter'|'digit'|'underscore'
 3.string
-constchar:="string"
-string:=char{string}
-char:=letter|digit|underscore
+constchar="string"
+string=char{string}
+char=letter|digit|underscore

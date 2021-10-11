@@ -1,14 +1,15 @@
 program = (stmt " "|while_stmt | if_stmt) {stmt " "|while_stmt | if_stmt}
-decstmt := identifier
-statements:= decstmt | assignstmt | readstmt | writestmt
-assignstmt:= ("define" type a) | "declare" type a{, a}
-readstmt:= "readFrom" "(" a ")"
-writestmt:= "writeFrom" "(" a ")"
+decstmt = identifier
+statements= decstmt | assignstmt | readstmt | writestmt | arraydecl
+assignstmt= ("define" type identifier) | "declare" type identifier{, identifier}
+readstmt= "readFrom" "(" identifier ")"
+writestmt= "writeFrom" "(" identifier ")"
 type = "int" | "char" | "string"
+arraydecl = ("define" | "declare") type identifier[constint] 
 logicalOperator = "and" | "or" | "not"
-if_stmt:: "ifGo" conditionstmt program [else_stmt]
-else_stmt:= "elseGo" conditionstmt program
-conditionstmt::= a relation a | a logicalOperator a
-relation:= "<" | "<=" | "==" | ">=" | ">" | "!="
-for_stmt:= "forGo" conditionstmt program
-while_stmt:="whileGo" conditionstmt program
+if_stmt = "ifGo" conditionstmt statements [else_stmt]
+else_stmt= "elseGo" statements
+conditionstmt= identifier relation identifier | identifier logicalOperator identifier
+relation= "<" | "<=" | "==" | ">=" | ">" | "!="
+for_stmt= "forGo" conditionstmt statements
+while_stmt="whileGo" conditionstmt statements
