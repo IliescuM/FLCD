@@ -1,0 +1,18 @@
+int a ;
+int b ;
+int gcd ;
+b = 200 ;
+a = 342 ;
+ifGO a > b
+int smaller ;
+smaller = b
+elseGo
+smaller = a
+int i ;
+i = 1 ;
+whileGO i <= smaller
+ifGO x % i == 0 and y % i == 0
+hcf = i
+
+
+

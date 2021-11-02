@@ -1,0 +1,8 @@
+int a ;
+int b ;
+a = 5 ;
+b = 10 ;
+ifGo a > b 
+print ( a ) ;
+elseGo
+print ( b ) ;

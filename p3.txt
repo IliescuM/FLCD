@@ -1,0 +1,14 @@
+int a ;
+string b ;
+a = 11 ;
+x = " True " ;
+forGo i in ( 2 , a )
+whileGO x == " True "
+ifGo a % i == 0 
+x = " False "
+elseGo
+x = " True "
+ifGo x == " True "
+print ( " prime " )
+elseGO
+print ( " notprime " )

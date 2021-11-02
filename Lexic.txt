@@ -7,8 +7,8 @@ a.Special symbols, representing:
 - arithmetic operators + - * / %  
 - logical operators and or not 
 - comparison operators == != > < >= <=
-- separator space
-- reserved words: ifGo elseGo not or whileGo and print for False True readFrom writeFrom
+- separator ; { } space  ( )
+- reserved words: ifGo elseGo not or whileGo and print for False True readFrom writeFrom int char string 
 
 b.identifiers
 -a sequence of letters and digits, such that the first character is a letter or "_"; the rule is:

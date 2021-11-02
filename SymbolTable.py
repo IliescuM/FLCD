@@ -16,7 +16,7 @@ class SymbolTable:
     # to avoid duplicating the pos if x == key : break.
     def add(self,key):
         pos = self.hashfun(key)
-        print(pos)
+        #print(pos)
         if self.__table[pos] is None:
             self.__table[pos] = []
             self.__table[pos].append(key)
@@ -57,7 +57,13 @@ class SymbolTable:
                 raise Exception()
     
     def __str__(self):
-        return str(self.__table)
+        list1=[]
+        i=0
+        for value in self.__table:
+            if value == None:
+                pass
+            else: list1.append(value)
+        return str(list1)
 
     
 def teste():
